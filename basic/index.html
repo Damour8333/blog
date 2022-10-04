@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic reac</title>
+    <title>Basic react</title>
 </head>
 <body>
     <div id="root"></div>
     
     <script src="https://unpkg.com/react@16/umd/react.development.js" ></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" ></script>
-    <script type="module">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.19.3/babel.min.js" ></script>
+    <script type="text/babel">
         const rootElement = document.getElementById("root");
-        React.createElement('div',{
-            className: 'container',
-            children: "Hello World",
-        });
+        // const element = React.createElement('div',{
+        //     className: 'container',
+        //     children: [
+        //         React.createElement('span',{children:"Bonjour"}),
+        //         React.createElement('span',{children:"Au revoir"}),
+        //     ],
+        // });
+
+    const element =    <div className='container'>
+            <span>Bonjour</span>
+            <span>Au revoir</span>
+            </div>;
         // const element = document.createElement("div");
         // element.textContent ="Hello World";
         // element.className = "container";
-        ReactDOm.render(element, rootElement)
+        ReactDOM.render(element, rootElement)
         //rootElement.append(element);
     </script>
 </body>
 </html>
 <!-- https://app.studi.fr/#/dashboard/events/22287/replay -->
+
+<!-- 47min -->
