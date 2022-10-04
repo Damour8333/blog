@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic react</title>
 </head>
+
 <body>
     <div id="root"></div>
-    
-    <script src="https://unpkg.com/react@16/umd/react.development.js" ></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.19.3/babel.min.js" ></script>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.19.3/babel.min.js"></script>
     <script type="text/babel">
         const rootElement = document.getElementById("root");
         // const element = React.createElement('div',{
@@ -22,17 +24,39 @@
         //     ],
         // });
 
-    const element =    <div className='container'>
-            <span>Bonjour</span>
-            <span>Au revoir</span>
-            </div>;
+        // const element =    <div className='container'>
+        //         <span>Bonjour</span>
+        //         <span>Au revoir</span>
+        //         </div>;
+
+
+
+        //     const children ='Hello World'
+        //     const className = 'container'
+        //     const props = {children,className}
+
+        // const element = <div {...props}/>
+
+        // création d'un composant 
+
+        const Message = ({ children }) => {
+            return <div className ="message" >{children}</div>;
+        }
+
+        const element = (
+            <main>
+                <Message >Hello WWWorld</Message>
+            </main>
+        )
         // const element = document.createElement("div");
         // element.textContent ="Hello World";
         // element.className = "container";
+
         ReactDOM.render(element, rootElement)
         //rootElement.append(element);
     </script>
 </body>
+
 </html>
 <!-- https://app.studi.fr/#/dashboard/events/22287/replay -->
 
